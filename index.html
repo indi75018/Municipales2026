@@ -154,7 +154,7 @@ header{height:var(--header-h);background:linear-gradient(135deg,#0e1e35 0%,#1528
   <div class="ld-brand">
     <div class="ld-bn">Institut Montaigne</div>
     <div class="ld-bl"></div>
-    <div class="ld-bs">Think tank independant</div>
+    <div class="ld-bs">Contribution Indi Ecorchard</div>
   </div>
   <div class="ld-t">Municipales 2026</div>
   <div class="ld-s" id="ld-s">Chargement des donnees...</div>
@@ -174,7 +174,7 @@ header{height:var(--header-h);background:linear-gradient(135deg,#0e1e35 0%,#1528
         <div style="display:flex;flex-direction:column;gap:1px">
           <div style="font-family:'Libre Baskerville',serif;font-size:10px;font-weight:700;color:#fff;letter-spacing:.16em;text-transform:uppercase;line-height:1">Institut Montaigne</div>
           <div style="height:1px;background:var(--gold);margin:2px 0"></div>
-          <div style="font-size:8px;color:rgba(255,255,255,.5);letter-spacing:.18em;text-transform:uppercase">Think tank indépendant</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.5);letter-spacing:.18em;text-transform:uppercase"> </div>
         </div>
       </div>
       <div style="font-family:'Libre Baskerville',serif;font-size:9px;font-style:italic;color:var(--gold);letter-spacing:.06em;margin-top:1px;padding-left:36px">Carte des Municipales</div>
@@ -344,13 +344,13 @@ var map = L.map('map',{center:[46.5,2.5],zoom:6,minZoom:4,maxZoom:16});
 var osmFR = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributeurs &mdash; Rendu par <a href="https://www.openstreetmap.fr/">OpenStreetMap France</a>',
   subdomains: ['a','b','c'],
-  maxZoom: 20, opacity: 0.75
+  maxZoom: 20, opacity: 0.5
 });
 // Fallback OSM standard si osmfr indisponible
 var osmStd = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   subdomains: ['a','b','c'],
-  maxZoom: 19, opacity: 0.75
+  maxZoom: 19, opacity: 0.5
 });
 osmFR.on('tileerror', function() {
   if (!map.hasLayer(osmStd)) { map.removeLayer(osmFR); osmStd.addTo(map); }
